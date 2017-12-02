@@ -1,0 +1,1 @@
+Places.insert({city:'Jaipur', details :{local_events: [{event:'Dandiya at central auditorium'},{event: 'Periodic Drama by Gilmores'}], attractions:[{attraction:'Hawa Mahal', img_src :'hawa_mahal.jpg'},{attraction:'Jantar Mantar', img_src:"jantar_matar.jpg"}]}});

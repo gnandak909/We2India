@@ -1,0 +1,34 @@
+<template name="addNewPlaceForm">
+				<center><h2>Add new Place</h2></center>
+					<form class="form-group">
+						Name of the place : <select class="form-control" name="nameOfTheCity" id="selectedCity" >
+					  <option class="list-group-item"> Select yout city</option>
+	 				  {{#each cityList }}
+  					 		<option class="list-group-item" value="{{city}}"> {{city}} </option>
+ 					  {{ /each}}
+ 					  </select>
+
+						Attractions :<br> <input type="text" name="attractions" required><br>
+						Events :<br> <input type="text" name="events"><br>
+						<input type="submit" value="Add"><br>
+					</form>
+			</template>
+		
+			
+
+		
+			<template name="addGuideForm">
+				<center><h2>Add Guide</h2></center>
+				<form class="form-group">
+					Name of the Guide : <br><input type="text" name="guideName" required><br>
+					Place Handled : <select class="form-control" name="city" id="placeHandled" >
+					  <option class="list-group-item"> Select yout city</option>
+	 				  {{#each cityList }}
+  					 		<option class="list-group-item" value="{{city}}"> {{city}} </option>
+ 					  {{ /each}}
+ 					  </select><br>
+ 					  Price per hour :<br><input type="number" name="price_per_hour" placeholder="Price per Hour"><br>
+					<input type="submit" value="Add">
+				</form>
+			</template>
+		

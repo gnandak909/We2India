@@ -1,0 +1,58 @@
+<template name="homepage">
+	
+	<!--button class="btn btn-danger" id="emergencyButton" data-toggle="modal" data-target="#myModal"> Emergency services</button-->
+	<button class="btn btn-danger" id="emergencyButton">Emergency services</button>
+	<div class="jumbotron"> <h1> Welcome to W2I </h1></div>
+	<button class="btn btn-warning" id="logout">Log out</button>
+	<div class="container">
+		<form class="form-group">
+		City: <select class="form-control" name="city" id="selectedCity" >
+					  <option class="list-group-item"> Select yout city</option>
+	 				  {{#each cityList }}
+  					 		<option class="list-group-item" value="{{city}}"> {{city}} </option>
+ 					  {{ /each}}
+ 					  </select>
+		</form>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			
+				<div class="attractions">
+			 		<center>Attractions</center>
+
+			 		<ul>
+			 		{{#each attractionsList}}
+			 			
+			 			<li><img src="{{img_src}}"> <br> {{attraction}}</li>
+			 			
+			 		{{/ each}}
+			 		</ul>
+			 	</div>
+
+		</div>
+		<div class="row">
+			<center> Events </center>
+				<ul>
+			 		{{#each eventsList}}
+			 			
+			 			<li> {{event}}</li>
+			 			
+			 		{{/ each}}
+			 		</ul>
+		</div>
+		<div class="row">
+				<center>Guides</center>
+				<ul>
+			 		{{#each guidesList}}
+			 			
+			 			<li> <pre>{{guide_name}}  ${{price_per_hour}}/hr       <button>book</button> </pre>
+			 							
+			 			</li>
+			 			
+			 		{{/ each}}
+			 		</ul>
+			
+		</div>
+	</div>
+</template>
